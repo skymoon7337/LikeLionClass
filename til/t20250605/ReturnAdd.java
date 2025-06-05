@@ -1,6 +1,6 @@
 package til.t20250605;
 
-public class Return_Add {
+public class ReturnAdd {
         public static int addNumber(int a,int b) {
             int result = a+b;
             return result;

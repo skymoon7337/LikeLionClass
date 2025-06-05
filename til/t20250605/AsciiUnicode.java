@@ -1,6 +1,6 @@
 package til.t20250605;
 
-public class Ascii_Unicode {
+public class AsciiUnicode {
     public static void main(String[] args) {
          char asciiChar = 'A';
          System.out.println("Character: "+ asciiChar);
