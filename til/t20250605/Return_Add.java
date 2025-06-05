@@ -7,7 +7,7 @@ public class Return_Add {
         }
 
         public static void main(String[] args) {
-            int number = addNumber(30,50);
+            int number = addNumber(20,50);
             System.out.println(number);
         }
 
