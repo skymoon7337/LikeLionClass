@@ -1,4 +1,4 @@
-package til.d0605;
+package til.t20250605;
 
 public class Return_Add {
         public static int addNumber(int a,int b) {

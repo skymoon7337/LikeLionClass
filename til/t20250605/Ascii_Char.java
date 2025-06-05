@@ -1,4 +1,4 @@
-package til.d0605;
+package til.t20250605;
 
 public class Ascii_Char {
     public static void main(String[] args) {
