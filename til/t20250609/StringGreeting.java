@@ -6,6 +6,9 @@ public class StringGreeting {
          String greeting = "Hello, Alice!";
 
          System.out.println(greeting.toLowerCase());
-         System.out.println(greeting.length());
+        System.out.println(greeting);
+        System.out.println(greeting.toUpperCase());
+        System.out.println(greeting);
+        System.out.println(greeting.length());
     }
 }
