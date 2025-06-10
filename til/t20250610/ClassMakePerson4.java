@@ -1,6 +1,6 @@
 package til.t20250610;
 
-public class Main {
+public class ClassMakePerson4 {
      public static void main(String[] args) {
           Person4 p = new Person4();
           p.sayHello();

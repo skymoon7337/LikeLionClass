@@ -1,6 +1,6 @@
 package til.t20250610;
 
-class Car {
+class Car0 {
      String brand;
      int year;
      String fuel;
@@ -9,10 +9,10 @@ class Car {
      }
 }
 
-public class ClassCar {
+public class ClassMakeCar {
      public static void main(String[] args) {
 
-          Car car = new Car();
+          Car0 car = new Car0();
 
           car.brand = "아우디";
           car.year = 2023;
