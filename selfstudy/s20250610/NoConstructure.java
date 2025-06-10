@@ -11,10 +11,10 @@ class Person2 {
 
 public class NoConstructure {
      public static void main(String[] args) {
-          Person2 person2 = new Person2();
-          person2.name = "하늘";
-          person2.age = 29;
+          Person2 person = new Person2();
+          person.name = "하늘";
+          person.age = 29;
 
-          person2.hello();
+          person.hello();
      }
 }

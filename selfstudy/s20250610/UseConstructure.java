@@ -16,7 +16,7 @@ class Person3 {
 
 public class UseConstructure {
      public static void main(String[] args) {
-          Person3 person3 = new Person3("하늘", 29);
-          person3.hello();
+          Person3 person = new Person3("하늘", 29);
+          person.hello();
      }
 }
