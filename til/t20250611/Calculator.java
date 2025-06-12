@@ -41,6 +41,7 @@ public class Calculator {
             }
 
             System.out.printf("결과: %.4f\n", result);
+            operator.close();
         }
+
     }
-    //상속과 super 오버라이딩 @오버라이드 어노테이션

@@ -40,6 +40,8 @@ public class CalculatorInfinity {
                }
 
                System.out.printf("결과: %.4f\n", result);
+
           }
+          // 종료코드와 operator.close(); 추가 필요
      }
 }
