@@ -1,9 +1,9 @@
 package til.t20250612;
 
-class Animal {
+class Animal3 {
      String name;
 
-     public Animal(String name) {
+     public Animal3(String name) {
           this.name = name;
      }
 
@@ -12,10 +12,10 @@ class Animal {
      }
 }
 
-class Dog extends Animal {
+class Dog3 extends Animal3 {
      String breed;
 
-     public Dog(String name, String breed) {
+     public Dog3(String name, String breed) {
           super(name);
           this.breed = breed;
      }
@@ -23,8 +23,8 @@ class Dog extends Animal {
 
 public class InheritanceC1 {
      public static void main(String[] args) {
-          Dog dog = new Dog("뽀뽀", "말티즈");
+          Dog3 dog = new Dog3("뽀뽀", "말티즈");
 
-          dog.printName("쿠키");
+          dog.printName();
      }
 }

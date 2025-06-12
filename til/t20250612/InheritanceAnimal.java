@@ -19,7 +19,7 @@ class Lion2 extends Animal2 {
 
     @Override
     public void makeSound() {
-        System.out.println("어흥!");
+        System.out.println("이거사자");
     }
 }
 
@@ -30,17 +30,17 @@ class Cat2 extends Animal2 {
 
     @Override
     public void makeSound() {
-        System.out.println("야옹~");
+        System.out.println("안살고양");
     }
 }
 
 public class InheritanceAnimal {
     public static void main(String[] args) {
-        Lion2 lion = new Lion2("심바");
-        Cat2 cat = new Cat2("나비");
+        Lion2 lion = new Lion2("사 자");
+        Cat2 cat = new Cat2("고양이");
 
-        lion.makeSound();  // 어흥!
-        cat.makeSound();   // 야옹~
+        System.out.print(lion.name+": "); lion.makeSound();  //
+        System.out.print(cat.name+": ");  cat.makeSound();   //
     }
 }
 
