@@ -32,8 +32,10 @@ class CPU{
 
                 case SAVE:
                     memory[operand] = register;
-                    System.out.println("SAVE: register = " + register + " → memory[" + operand + "]");
+                    System.out.println("SAVE: Saving memory[" + operand + "] (" + memory[operand] + ") from register.");
                     break;
+
+
             }
         }
     }
