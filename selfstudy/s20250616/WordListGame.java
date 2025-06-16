@@ -72,7 +72,7 @@ public class WordListGame {
         }
 
     }
-
+    // 여기서부터
     private Feedback evaluateGuess(String guee,String answer){
         char[] symbols = new char[WORD_LENGTH];
         int[] count= new int[26];
