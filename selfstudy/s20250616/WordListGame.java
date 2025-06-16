@@ -62,7 +62,7 @@ public class WordListGame {
         }
 
 
-        String getWordCheckResult(){
+        String getWordResultCheck(){
             StringBuilder sb=new StringBuilder();
 
             for (char c:resultSymbols){
@@ -71,7 +71,16 @@ public class WordListGame {
             return sb.toString();
         }
 
-
     }
+
+    private Feedback evaluateGuess(String guee,String answer){
+        char[] symbols = new char[WORD_LENGTH];
+        int[] count= new int[26];
+
+        for (char c: answer.toCharArray()){
+            count[c-'A']++;
+        }
+    }
+
 
 }
