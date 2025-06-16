@@ -1,14 +1,15 @@
 package til.t20250613;
 
-class CPU{
-    public int register=0;
-    public int[] memory={5,10,0};
 
-    private static final int LOAD=1;
-    private static final int SAVE=2;
-    private static final int ADD=3;
-    private static final int SUB=4;
-    private static final int HALT=5;
+class CPU {
+    public int register = 0;
+    public int[] memory = {5, 10, 0};
+
+    private static final int LOAD = 1;
+    private static final int SAVE = 2;
+    private static final int ADD = 3;
+    private static final int SUB = 4;
+    private static final int HALT = 5;
 
     private int[][] program = {
             { LOAD, 0 },         // register = memory[0]
@@ -18,31 +19,50 @@ class CPU{
     };
 
     public void executeProgram() {
-        int pc=0; //program counter
+        int pc = 0; //program counter
 
-        while(true){
-            int opcode=program[pc][0];
-            int operand=program[pc][1];
+        while(true) {
+            int opcode = program[pc][0];
+            int operand = program[pc][1];
 
-            switch(opcode){
+            switch (opcode) {
                 case LOAD:
-                    register=memory[operand];
-                    System.out.println("MOV: Loading memory[0] ("+operand+memory[0]+") into register.");
+                    register = memory[operand];
+                    System.out.println("LOAD: Loading memory[" + operand + "] (" + memory[0] + ") into register.");
                     break;
-
                 case SAVE:
                     memory[operand] = register;
-                    System.out.println("SAVE: Saving memory[" + operand + "] (" + memory[operand] + ") from register.");
+                    System.out.println("SAVE: Saving memory[" + operand + "] (" + memory[0] + ") from register.");
                     break;
-
+                case ADD:
+                    register += memory[operand];
+                    System.out.println("ADD: Adding memory[" + operand + "] (" + memory[operand] + ") to register. New register value: " + register);
+                    break;
+                case SUB:
+                    register -= memory[operand];
+                    System.out.println("SUB: Subtracting memory[" + operand + "] (" + memory[operand] + ") from register. New register value: " + register);
+                    break;
+                case HALT:
+                    System.out.println("HALT: Stopping program execution.");
+                    return;
+                default:
+                    System.out.println("잘못 입력했는데");
+                    return;
 
             }
+
+            pc++;
         }
     }
 }
 
 
-public class CpuCoding {
-    public static void main(String[] args) {
+
+    public class CpuCoding {
+        public static void main(String[] args) {
+            CPU cpu=new CPU();
+            cpu.executeProgram();
+            System.out.println("Final Memory state: memory[2]= "+ cpu.memory[2]);
+
+        }
     }
-}
