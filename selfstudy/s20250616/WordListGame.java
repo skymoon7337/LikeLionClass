@@ -34,9 +34,44 @@ public class WordListGame {
         }
     }
 
+
+
     public static String pickRandomWord() {
         Random rand = new Random();
 
         return WORD_LIST[rand.nextInt(WORD_LIST.length)];
     }
+
+    // C - 알파벳 o 자리 o
+    // W - 알파벳 o 자리 x
+    // N - 알파벳 x 자리 x
+    private class Feedback{
+        private final char[] resultSymbols;
+
+        Feedback(char[] resultSymbols){
+            this.resultSymbols=resultSymbols;
+        }
+
+        boolean isAllCorrect(){
+            for (char c:resultSymbols) {
+                if (c != 'C'){
+                    return false;
+                }
+            }
+            return true; // CCCCC
+        }
+
+
+        String getWordCheckResult(){
+            StringBuilder sb=new StringBuilder();
+
+            for (char c:resultSymbols){
+                sb.append(c);
+            }
+            return sb.toString();
+        }
+
+
+    }
+
 }
