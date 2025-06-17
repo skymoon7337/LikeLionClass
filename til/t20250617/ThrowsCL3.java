@@ -2,7 +2,7 @@ package til.t20250617;
 
 public class ThrowsCL3 {
      public static void main(String[] args) {
-          String test = "2,a43";
+          String test = "11,11";
 
           try {
                int result = multiply(test);
