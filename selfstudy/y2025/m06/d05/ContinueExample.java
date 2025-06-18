@@ -1,4 +1,4 @@
-package selfstudy.s20250605;
+package selfstudy.y2025.m06.d05;
 
 public class ContinueExample {
     public static void main(String[] args) {

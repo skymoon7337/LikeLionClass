@@ -1,4 +1,4 @@
-package selfstudy.s20250615;
+package selfstudy.y2025.m06.d15;
 
 abstract class Animal {
      String name;

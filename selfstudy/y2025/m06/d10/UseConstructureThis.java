@@ -1,4 +1,4 @@
-package selfstudy.s20250610;
+package selfstudy.y2025.m06.d10;
 
      class Person5 {
           String name;

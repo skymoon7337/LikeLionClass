@@ -1,4 +1,4 @@
-package selfstudy.s20250616;
+package selfstudy.y2025.m06.d16;
 
 import java.util.Random;
 

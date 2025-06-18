@@ -1,4 +1,4 @@
-package selfstudy.s20250617;
+package selfstudy.y2025.m06.d17;
 
 public class TryCatchS1 {
      public static void main(String[] args) {

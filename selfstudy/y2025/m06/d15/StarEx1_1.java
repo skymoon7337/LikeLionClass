@@ -1,4 +1,4 @@
-package selfstudy.s20250615;
+package selfstudy.y2025.m06.d15;
 
 /*
 1         4         좌공백 3+ 우공백3 + 별 1
