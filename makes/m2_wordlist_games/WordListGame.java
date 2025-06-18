@@ -1,4 +1,4 @@
-package makes;
+package makes.m2_wordlist_games;
 import java.util.Random;
 import java.util.Scanner;
 //WordListGame

@@ -14,7 +14,7 @@ interface A {
 
 public class LambdaEx1 {
     public static void main(String[] args) {
-         // A a =(String name)->Util.sayHello(name);
+         // makes.M1_play_off_games.A a =(String name)->Util.sayHello(name);
             A a = Util::sayHello;
 
          a.say("h662");
