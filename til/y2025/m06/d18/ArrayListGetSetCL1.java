@@ -8,7 +8,7 @@ public class ArrayListGetSetCL1 {
           List<String> fruits = new ArrayList<>();
 
           fruits.add("Mango");
-          fruits.add("Bbanana");
+          fruits.add("banana");
           fruits.add("Apple");
           fruits.add("Tomato");
           fruits.add("Cherry");

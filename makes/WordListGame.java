@@ -1,4 +1,4 @@
-package selfstudy.s20250616;
+package makes;
 import java.util.Random;
 import java.util.Scanner;
 //WordListGame
@@ -47,7 +47,7 @@ public class WordListGame {
     }
 
     public static String pickRandomWord() {
-        Random rand = new Random();
+        Random rand = new Random(); //시드에 숫자넣으면 정답 고정
 
         return WORD_LIST[rand.nextInt(WORD_LIST.length)];
     }
