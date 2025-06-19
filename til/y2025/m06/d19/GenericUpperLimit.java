@@ -2,7 +2,7 @@ package til.y2025.m06.d19;
 import java.util.*;
 
 
-public class GenericSumCL1 {
+public class GenericUpperLimit {
 
      public static double sumList(List<? extends Number> GSlist) {
 
