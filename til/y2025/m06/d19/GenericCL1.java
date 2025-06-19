@@ -26,6 +26,7 @@ class Box<T> {
 
     public <E> void printContent(E extraInfo) {
         System.out.println("Content: " + content + ", Extra: " + extraInfo);
+        System.out.println("E 타입: " + extraInfo.getClass().getName());
     }
 
 }
@@ -36,11 +37,13 @@ public class GenericCL1 {
 
         System.out.println(stringBox.getContent());
 
-        stringBox.setContent("실패!");
+        stringBox.setContent("실패");
 
         System.out.println(stringBox.getContent());
 
         stringBox.printContent(123);
+        stringBox.printContent("가나다");
+        stringBox.printContent(true);
 
 
     }

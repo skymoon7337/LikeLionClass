@@ -4,11 +4,11 @@ import java.util.*;
 
 public class GenericSumCL1 {
 
-     public static double sumList(List<? extends Number> list) {
+     public static double sumList(List<? extends Number> GSlist) {
 
           double sum = 0;
 
-          for (Number n : list) {
+          for (Number n : GSlist) {
                sum += n.doubleValue();
           }
           return sum;

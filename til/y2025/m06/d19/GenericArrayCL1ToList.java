@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 class BoxGATL {
-    public static <T> void displayArray(List<T> array) {
-        for(T element: array) {
+    public static <T> void displayArray(List<T> arrayGATL) {
+        for(T element: arrayGATL) {
             System.out.println(element);
         }
     }

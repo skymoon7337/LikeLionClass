@@ -9,7 +9,5 @@ public class StreamCL1 {
         List<Integer> numbers= Arrays.asList(1,2,3,4,5);
         numbers.stream().filter(n->n%2==0);
 
-
-
     }
 }
