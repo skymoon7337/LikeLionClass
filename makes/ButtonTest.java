@@ -24,9 +24,11 @@ public class ButtonTest {
 
      // 내부 클래스: 외부와 강하게 결합되지 않음
      // 버튼 클릭시 실제 수행할 로직
+     // 이게 람다식으로 표현 가능한 느낌
      private class ClickHandler implements OnClickListener {
           public void onClick() {
-               System.out.println("Button was clicked!");
+               System.out.println("Button was clicked!");    
+
           }
      }
 

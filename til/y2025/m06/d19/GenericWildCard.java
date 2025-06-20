@@ -3,7 +3,7 @@ package til.y2025.m06.d19;
 import java.util.List;
 import java.util.Arrays;
 
-public class Main {
+public class GenericWildCard {
 
      public static void printElements(List<?> list) {
           for (Object o : list) {
