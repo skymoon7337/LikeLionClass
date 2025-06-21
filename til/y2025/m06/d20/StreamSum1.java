@@ -3,7 +3,7 @@ package til.y2025.m06.d20;
 import java.util.Arrays;
 import java.util.List;
 
-public class StreamCL1 {
+public class StreamSum1 {
      public static void main(String[] args) {
           List<Integer> numbers= Arrays.asList(1,2,3,4,5);
 
