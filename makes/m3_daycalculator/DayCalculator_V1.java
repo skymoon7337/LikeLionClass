@@ -60,7 +60,7 @@ public class DayCalculator_V1 {
         j = inputyear / 100;
 
         resultday = (inputday + (13 * (inputmonth + 1)) / 5 + k + (k / 4) + (j / 4) + (5 * j)) % 7;
-        ;
+
 
         // resultday -> 0(토요일), 1(일요일), 2(월요일), 3(화요일), 4(수요일), 5(목요일), 6(금요일)
         String[] days = {"토", "일", "월", "화", "수", "목", "금"};
@@ -68,7 +68,7 @@ public class DayCalculator_V1 {
         System.out.printf("%d년 %d월 %d일은 %s요일 입니다.\n", year, month, day, days[resultday]);
 
         System.out.println("");
-        System.out.println("반복 실행합니다.");
+        System.out.println("아무거나 입력하면 반복 실행합니다.");
         System.out.println("종료하려면 exit을 입력해주세요.");
         String answer = scanner.next();
         if (answer.equalsIgnoreCase("exit")){   //대소문자 구분 X
