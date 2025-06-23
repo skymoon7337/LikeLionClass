@@ -1,4 +1,4 @@
-package makes;
+package makes.m0;
 
 public class ButtonTest {
 
