@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Sky's 계산기</title>
+  <style>
+    @font-face {
+        font-family: 'Ownglyph_corncorn-Rg';
+        src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2412-1@1.0/Ownglyph_corncorn-Rg.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    body {
+        font-family: 'Ownglyph_corncorn-Rg', Arial, sans-serif;
+        margin:0;
+        padding:20px;
+    }
+
+    h1 {
+        font-family: 'Arial Black', sans-serif;
+    }
+
+    .result, .error {
+        font-weight: bold;
+    }
+
+    button {
+        font-family: 'Ownglyph_corncorn-Rg', Arial, sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+<h1>Sky's 계산기</h1>
+<form th:action="@{/calculate}" method="post">
+  <label for="num1">Number 1:</label>
+  <input type="number" step="any" id="num1" name="num1" required/>
+
+  <label for="num2">Number 2:</label>
+  <input type="number" step="any" id="num2" name="num2" required/>
+
+  <label for="operation">Operation: </label>
+  <select id="operation" name="operation">
+    <option value="add">Add (+)</option>
+    <option value="subtract">Subtract (-)</option>
+    <option value="multiply">Multiply (×)</option>
+    <option value="divide">Divide (÷)</option>
+  </select>
+
+  <button type="submit">Calculate</button>
+</form>
+
+<div th:if="${errorMessage}" class="error">
+  <h2 style="color:red;">Error: <span th:text="${errorMessage}"></span></h2>
+</div>
+
+<div th:if="${result}" class="result">
+  <h2>Result: <span th:text="${result}"></span></h2>
+</div>
+</body>
+</html>
