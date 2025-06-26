@@ -121,7 +121,7 @@
     <h2>Error: <span th:text="${errorMessage}"></span></h2>
 </div>
 
-<div th:if="${result}" class="result">
+<div th:if="${result != null}" class="result">
     <h2>Result: <span th:text="${result}"></span></h2>
 </div>
 </body>
