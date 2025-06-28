@@ -14,7 +14,12 @@ public class ToDoService {
 
     public List<Task> getAllTasks() {
         return tasks.stream()
-                .sorted((a, b) -> a.getDday().compareTo(b.getDday()))
+                .sorted((a, b) -> {
+                    if (a.isCompleted() != b.isCompleted()) {
+                        return Boolean.compare(a.isCompleted(), b.isCompleted());
+                    }
+                    return a.getDday().compareTo(b.getDday());
+                })
                 .toList();
     }
 

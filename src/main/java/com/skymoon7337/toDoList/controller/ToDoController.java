@@ -39,8 +39,6 @@ public class ToDoController {
     @PostMapping("/todos/toggle")
     public String toggleComplete(@RequestParam("taskId") int taskId) {
         toDoService.toggleTaskCompletion(taskId);
-        System.out.println(taskId);
-
         return "redirect:/";
     }
 
