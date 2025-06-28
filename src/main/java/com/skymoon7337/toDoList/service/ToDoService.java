@@ -3,6 +3,7 @@ package com.skymoon7337.toDoList.service;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.Comparator;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -13,7 +14,7 @@ public class ToDoService {
     private final AtomicInteger idCounter = new AtomicInteger(1);
 
     public List<Task> getAllTasks() {
-        return tasks;
+        return tasks.stream().sorted((a, b) -> a.getDday().compareTo(b.getDday())).toList();
     }
 
     public void addTask(String description, LocalDateTime dday) {
