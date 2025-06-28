@@ -14,8 +14,9 @@ public class ToDoService {
     private final AtomicInteger idCounter = new AtomicInteger(1);
 
     public List<Task> getAllTasks() {
-        tasks.sort((a, b) -> a.getDday().compareTo(b.getDday()));
-        return tasks;
+        return tasks.stream()
+                .sorted((a, b) -> a.getDday().compareTo(b.getDday()))
+                .toList();
     }
 
     public void addTask(String description, LocalDateTime dday) {
