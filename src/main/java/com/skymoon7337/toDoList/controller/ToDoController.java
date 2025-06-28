@@ -8,6 +8,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.ui.Model;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 @Controller
 public class ToDoController {
     @Autowired
@@ -21,15 +24,22 @@ public class ToDoController {
     }
 
     @PostMapping("/todos")
-    public String addTask(@RequestParam("task") String task) {
-        toDoService.addTask(task);
-
+    public String addTask(
+            @RequestParam("task") String task,
+            @RequestParam(value = "dday", required = false) String ddayStr
+    ) {
+        LocalDateTime dday = null;
+        if (ddayStr != null && !ddayStr.isEmpty()) {
+            dday = LocalDateTime.parse(ddayStr, DateTimeFormatter.ISO_LOCAL_DATE_TIME);
+        }
+        toDoService.addTask(task, dday);
         return "redirect:/";
     }
 
     @PostMapping("/todos/toggle")
     public String toggleComplete(@RequestParam("taskId") int taskId) {
         toDoService.toggleTaskCompletion(taskId);
+        System.out.println(taskId);
 
         return "redirect:/";
     }
@@ -37,9 +47,14 @@ public class ToDoController {
     @PostMapping("/todos/update")
     public String updateTask(
             @RequestParam("taskId") int taskId,
-            @RequestParam("newDescription") String newDescription
+            @RequestParam("newDescription") String newDescription,
+            @RequestParam(value = "newDday", required = false) String newDdayStr
     ) {
-        toDoService.updateTask(taskId, newDescription);
+        LocalDateTime newDday = null;
+        if (newDdayStr != null && !newDdayStr.isEmpty()) {
+            newDday = LocalDateTime.parse(newDdayStr, DateTimeFormatter.ISO_LOCAL_DATE_TIME);
+        }
+        toDoService.updateTask(taskId, newDescription, newDday);
 
         return "redirect:/";
     }
