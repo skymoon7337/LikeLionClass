@@ -43,6 +43,17 @@ public class MemoController {
         return "redirect:/";
     }
 
+    @PostMapping("/edit")
+    public String editMemo(
+            @RequestParam int id,
+            @RequestParam String title,
+            @RequestParam String content
+    ) {
+        memoRepository.update(id, title, content);
+
+        return "redirect:/";
+    }
+
     @PostMapping("/delete")
     public String deleteMemo(@RequestParam int id) {
         memoRepository.delete(id);

@@ -2,7 +2,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #fff8dc;
+    background-color: #f4f6f8;  /* 밝은 회청색 */
     font-family: "Courier New", Courier, monospace;
     color: #333;
 }
@@ -12,9 +12,9 @@ h1 {
     text-align: center;
     padding: 20px;
     font-size: 32px;
-    background-color: #f4e2d8;
+    background-color: #dce3ea;  /* 연한 회청색 */
     margin: 0;
-    border-bottom: 2px solid #e2cfcf;
+    border-bottom: 2px solid #c0ccd4;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
@@ -22,11 +22,11 @@ h1 {
 .add-form {
     max-width: 600px;
     margin: 30px auto;
-    background-color: #fffdf5;
+    background-color: #ffffff;
     padding: 20px;
     border-radius: 10px;
-    border: 1px solid #e2cfcf;
-    box-shadow: 2px 4px 8px rgba(0,0,0,0.1);
+    border: 1px solid #d0d7dd;
+    box-shadow: 2px 4px 8px rgba(0,0,0,0.08);
 }
 
 input[type="text"],
@@ -34,24 +34,24 @@ textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 12px;
-    border: 1px solid #d3b8ae;
+    border: 1px solid #bfc8cf;
     border-radius: 6px;
     font-size: 16px;
-    background-color: #fefcf8;
+    background-color: #f9fafb;
     resize: vertical;
     box-sizing: border-box;
 }
 
 input[type="text"]:focus,
 textarea:focus {
-    border-color: #b5838d;
+    border-color: #8aaed4;
     outline: none;
 }
 
 /* 버튼 */
 button {
     padding: 10px 16px;
-    background-color: #b5838d;
+    background-color: #8aaed4;
     color: white;
     border: none;
     border-radius: 6px;
@@ -61,7 +61,7 @@ button {
 }
 
 button:hover {
-    background-color: #9f5f7f;
+    background-color: #6e99c7;
 }
 
 /* 목록 */
@@ -73,12 +73,12 @@ ul {
 }
 
 li {
-    background-color: #fffdf5;
-    border: 1px solid #e2cfcf;
+    background-color: #ffffff;
+    border: 1px solid #d0d7dd;
     padding: 15px 20px;
     margin-bottom: 15px;
     border-radius: 10px;
-    box-shadow: 1px 3px 6px rgba(0,0,0,0.08);
+    box-shadow: 1px 3px 6px rgba(0,0,0,0.06);
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -88,7 +88,7 @@ li {
 li h3 {
     margin: 0 0 8px 0;
     font-size: 20px;
-    color: #5a3e36;
+    color: #2f4f4f;
 }
 
 li p {
@@ -106,7 +106,7 @@ li p {
 
 .actions a {
     margin-right: 8px;
-    color: #333;
+    color: #555;
     text-decoration: none;
 }
 

@@ -1,7 +1,6 @@
 package com.skymoon7337.memo_app.repository;
 
 import com.skymoon7337.memo_app.model.Memo;
-import com.skymoon7337.memo_app.model.Memo;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
@@ -42,6 +41,13 @@ public class MemoRepository {
         jdbcTemplate.update(
                 "INSERT INTO memo (title, content) VALUES (?, ?)",
                 title, content
+        );
+    }
+
+    public void update(int id, String title, String content) {
+        jdbcTemplate.update(
+                "UPDATE memo SET title = ?, content = ? WHERE id = ?",
+                title, content, id
         );
     }
 
