@@ -19,6 +19,7 @@ public class TeacherRepository {
                     .name(resultSet.getString("name"))
                     .build();
 
+
     public List<Teacher> findAll() {
         return jdbcTemplate.query("SELECT * FROM teacher ORDER BY name", mapper);
     }
@@ -37,5 +38,9 @@ public class TeacherRepository {
         return jdbcTemplate.update(
                 "UPDATE teacher SET name = ? WHERE id = ?", teacher.getName(), teacher.getId()
         );
+    }
+
+    public int deleteById(int id) {
+        return jdbcTemplate.update("DELETE FROM teacher WHERE id = ?", id);
     }
 }
