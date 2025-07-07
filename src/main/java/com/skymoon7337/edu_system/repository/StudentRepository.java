@@ -50,4 +50,8 @@ public class StudentRepository {
                 student.getName(), student.getScore(), student.getTeacherId(), student.getId()
         );
     }
+
+    public int deleteById(int id) {
+        return jdbcTemplate.update("DELETE FROM student WHERE id = ?", id);
+    }
 }
