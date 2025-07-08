@@ -1,7 +1,7 @@
 package com.skymoon7337.to_do_list_with_dto.controller;
 
 
-import com.skymoon7337.to_do_list_with_dto.dto.SignupDTO;
+import com.skymoon7337.to_do_list_with_dto.dto.SignupDto;
 import com.skymoon7337.to_do_list_with_dto.model.User;
 import com.skymoon7337.to_do_list_with_dto.repository.UserRepository;
 import jakarta.validation.Valid;
@@ -21,14 +21,14 @@ public class SignupController {
 
     @GetMapping("/signup")
     public String showSignup(Model model) {
-        model.addAttribute("signupDto", new SignupDTO());
+        model.addAttribute("signupDto", new SignupDto());
 
         return "signup";
     }
 
     @PostMapping("/signup")
     public String doSignup(
-            @Valid @ModelAttribute("signupDto") SignupDTO signupDTO,
+            @Valid @ModelAttribute("signupDto") SignupDto signupDTO,
             BindingResult bindingResult,
             Model model
     ) {
