@@ -23,7 +23,6 @@ public class UserRepository {
         return user;
     };
 
-
     public User findByUsername(String username) {
         String sql = "SELECT * FROM users WHERE username = ?";
 
