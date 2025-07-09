@@ -30,19 +30,18 @@ public class SignupController {
             BindingResult bindingResult,
             Model model
     ) {
-        if(bindingResult.hasErrors()) return "signup";
+        if (bindingResult.hasErrors()) return "signup";
 
-        if(userRepository.findByUsername(signupDto.getUsername()).isPresent()) {
-            model.addAttribute("error", "이미 사용중인 아이디입니다");
+        if (userRepository.findByUsername(signupDto.getUsername()).isPresent()) { //값 존재여부에 따라 bool값 반환
+            model.addAttribute("error", "이미 사용중인 아이디입니다.");
 
             return "signup";
         }
-
         userRepository.save(User.builder()
                 .username(signupDto.getUsername())
                 .password(signupDto.getPassword())
                 .build());
-
         return "redirect:/login?registered";
     }
+
 }

@@ -9,10 +9,10 @@ import lombok.Setter;
 @Setter
 public class SignupDto {
     @NotBlank
-    @Size(min=3, max=50)
+    @Size(min=3, max=20)
     private String username;
 
     @NotBlank
-    @Size(min=6, max=100)
+    @Size(min=6, max=20)
     private String password;
 }

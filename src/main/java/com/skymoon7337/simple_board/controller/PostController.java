@@ -39,7 +39,7 @@ public class PostController {
 
     @GetMapping("/add")
     public String addForm(Model model, HttpSession httpSession) {
-        if (currentUser(httpSession) == null) return "redirect:/login";
+        if (currentUser(httpSession) == null) return "redirect:/login";  //세션만료 등
 
         model.addAttribute("postDto", new PostDto());
 
@@ -54,7 +54,7 @@ public class PostController {
     ) {
         if (bindingResult.hasErrors()) return "post-form";
 
-        User user = currentUser(httpSession);
+        User user = currentUser(httpSession);   // 이미 통과되어서 검사X
         Post post = Post.builder()
                 .title(postDto.getTitle())
                 .content(postDto.getContent())
@@ -66,4 +66,5 @@ public class PostController {
 
         return "redirect:/posts";
     }
+
 }
