@@ -30,8 +30,9 @@ public class PostController {
     }
 
     @GetMapping
-    public String list(Model model) {
+    public String list(Model model,HttpSession httpSession) {
         model.addAttribute("posts", postRepository.findAll());
+        model.addAttribute("isLoggedIn", currentUser(httpSession) != null);
 
         return "post-list";
     }
@@ -76,6 +77,7 @@ public class PostController {
 
         model.addAttribute("post", post);
         model.addAttribute("commentDto", new CommentDto());
+        model.addAttribute("isLoggedIn", currentUser(httpSession) != null);
 
         return "post-detail";
     }
@@ -97,6 +99,11 @@ public class PostController {
         }
 
         User user = currentUser(httpSession);
+
+        if (user == null) {
+            return "redirect:/login";
+        }
+
         Comment comment = Comment.builder()
                 .post(post)
                 .author(user)

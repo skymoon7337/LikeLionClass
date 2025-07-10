@@ -27,14 +27,19 @@
         </div>
     </li>
 </ul>
-<form th:action="@{'/posts/' + ${post.id} + '/comments'}"
-      th:object="${commentDto}" method="post" class="form-container">
-    <label>
-        댓글:
-        <textarea rows="3" th:field="*{text}"></textarea>
-    </label>
-    <button type="submit">댓글 등록</button>
-    <a th:href="@{/posts}">뒤로</a>
-</form>
+<div th:if="${isLoggedIn}">
+    <form th:action="@{'/posts/' + ${post.id} + '/comments'}"
+          th:object="${commentDto}" method="post" class="form-container">
+        <label>
+            댓글:
+            <textarea rows="3" th:field="*{text}"></textarea>
+        </label>
+        <button type="submit">댓글 등록</button>
+        <a th:href="@{/posts}">뒤로</a>
+    </form>
+</div>
+<div th:if="${!isLoggedIn}">
+    <p style="color: gray;">댓글 작성은 <a th:href="@{/login}">로그인</a> 후 가능합니다.</p>
+</div>
 </body>
 </html>
