@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Event List</title>
+  <meta charset="UTF-8"/>
+  <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+<h1>이벤트 목록</h1>
+<table>
+  <tr>
+    <th>이름</th>
+    <th>날짜</th>
+    <th>장소</th>
+    <th>상세</th>
+    <th>수정</th>
+    <th>삭제</th>
+  </tr>
+  <tr th:each="event : ${events}">
+    <td th:text="${event.name}"></td>
+    <td th:text="${#temporals.format(event.eventDate, 'yyyy-MM-dd HH:mm')}"></td>
+    <td style="max-width:240px; white-space:pre-line;">
+      <span style="display:inline-block; max-width:220px; overflow:hidden; text-overflow:ellipsis;">
+        <span th:text="${event.location}"></span>
+      </span>
+    </td>
+    <td><a th:href="@{|/events/${event.id}|}" class="detail-btn">상세</a></td>
+    <td><a th:href="@{|/events/${event.id}/edit|}" class="detail-btn">수정</a></td>
+    <td>
+      <form th:action="@{|/events/${event.id}/delete|}" method="post" onsubmit="return confirm('정말 삭제하시겠습니까?');">
+        <button type="submit" class="delete-btn">삭제</button>
+      </form>
+    </td>
+  </tr>
+</table>
+
+<hr>
+
+<h2>새 이벤트 등록</h2>
+<form th:action="@{/events}" method="post" class="register-form">
+  이름: <input type="text" name="name" required><br>
+  날짜: <input type="datetime-local" name="eventDate" required><br>
+  장소: <input type="text" name="location"><br>
+  <button type="submit" class="register-btn">등록</button>
+</form>
+</body>
+</html>

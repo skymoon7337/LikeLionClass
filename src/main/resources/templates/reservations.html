@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Reservations</title>
+  <meta charset="UTF-8"/>
+  <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+<h1>예약 목록</h1>
+<table>
+  <tr>
+    <th>이벤트 이름</th>
+    <th>참가자 이름</th>
+    <th>인원수</th>
+  </tr>
+  <tr th:each="res : ${reservations}">
+    <td th:text="${res.eventName}"></td>
+    <td th:text="${res.attendeeName}"></td>
+    <td th:text="${res.seats}"></td>
+  </tr>
+</table>
+<a th:href="@{/events}" class="back-link">이벤트 목록으로</a>
+</body>
+</html>

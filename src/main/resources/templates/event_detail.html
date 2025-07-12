@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Event Detail</title>
+  <meta charset="UTF-8"/>
+  <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+<h1 th:text="${event.name}">이벤트 이름</h1>
+<p class="center-info">
+  날짜: <span th:text="${#temporals.format(event.eventDate, 'yyyy-MM-dd HH:mm')}"></span><br>
+  장소: <span th:text="${event.location}"></span>
+</p>
+<h2>예약 현황</h2>
+<table>
+  <tr>
+    <th>참가자 이름</th>
+    <th>인원수</th>
+    <th>예약 취소</th>
+  </tr>
+  <tr th:each="res : ${reservations}">
+    <td th:text="${res.attendeeName}"></td>
+    <td th:text="${res.seats}"></td>
+    <td>
+      <form th:action="@{|/reservations/${res.id}/cancel|}" method="post">
+        <button type="submit" class="cancel-btn">취소</button>
+      </form>
+    </td>
+  </tr>
+</table>
+<hr>
+<h2>예약하기</h2>
+<form th:action="@{|/events/${event.id}/reserve|}" method="post" class="reserve-form">
+  이름: <input type="text" name="attendeeName" required><br>
+  인원수: <input type="number" name="seats" min="1" value="1" required><br>
+  <button type="submit" class="reserve-btn">예약</button>
+</form>
+<hr>
+<a href="/events" class="back-link">목록으로 돌아가기</a>
+</body>
+</html>
