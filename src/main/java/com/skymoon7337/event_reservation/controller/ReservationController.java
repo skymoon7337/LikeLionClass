@@ -9,6 +9,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -29,5 +30,17 @@ public class ReservationController {
     @PostMapping("/api/events/{eventId}/reservations")
     public Reservation add(@PathVariable Long eventId, @Valid @RequestBody ReservationDto reservationDto) {
         return reservationService.create(eventId, reservationDto);
+    }
+
+    @PutMapping("/api/reservations/{id}")
+    public Reservation update(@PathVariable Long id, @Valid @RequestBody ReservationDto reservationDto) {
+        return reservationService.update(id, reservationDto);
+    }
+
+    @DeleteMapping("/api/reservations/{id}")
+    public ResponseEntity<Void> delete(@PathVariable Long id) {
+        reservationService.delete(id);
+
+        return ResponseEntity.noContent().build();
     }
 }

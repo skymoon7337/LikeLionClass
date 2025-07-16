@@ -34,4 +34,17 @@ public class ReservationService {
 
         return reservationRepository.save(reservation);
     }
+
+    public Reservation update(Long id, ReservationDto reservationDto) {
+        Reservation existReservation = reservationRepository.findById(id).orElseThrow(() ->  new NoSuchElementException("예약 없음"));
+
+        existReservation.setAttendeeName(reservationDto.getAttendeeName());
+        existReservation.setSeat(reservationDto.getSeats());
+
+        return reservationRepository.save(existReservation);
+    }
+
+    public void delete(Long id) {
+        reservationRepository.deleteById(id);
+    }
 }
