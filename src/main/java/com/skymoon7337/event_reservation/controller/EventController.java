@@ -4,6 +4,7 @@ import com.skymoon7337.event_reservation.dto.EventDto;
 import com.skymoon7337.event_reservation.model.Event;
 import com.skymoon7337.event_reservation.service.EventService;
 import jakarta.validation.Valid;
+import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -34,9 +35,13 @@ public class EventController {
         return eventService.search(name, location, from, to, pageable);
     }
 
+    @GetMapping("/{id}")
+    public Event get(@PathVariable Long id) {
+        return eventService.getById(id);
+    }
+
     @PostMapping
     public Event create(@Valid @RequestBody EventDto eventDto) {
-
         return eventService.create(eventDto);
     }
 
