@@ -10,7 +10,7 @@ import java.io.Serializable;
 @Embeddable
 @NoArgsConstructor
 @AllArgsConstructor
-@EqualsAndHashCode // 값이 같으면 같은 객체로 취급 //equals(), hashCode()를 자동 생성
+@EqualsAndHashCode
 public class RecipeIngredientId implements Serializable {
     private Long recipeId;
     private Long ingredientId;
