@@ -1,6 +1,6 @@
 # 최상위에 .env.local 생성필요
 
-VITE_SUPABASE_URL=
+VITE_SUPABASE_URL=  
 VITE_SUPABASE_ANON_KEY=
 
 # React + Vite
