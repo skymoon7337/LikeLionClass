@@ -4,7 +4,6 @@ import com.skymoon7337.backend.dto.TodoDto;
 import com.skymoon7337.backend.dto.TodoResponseDto;
 import com.skymoon7337.backend.dto.TodoStatsDto;
 import com.skymoon7337.backend.dto.TodoUpdateDto;
-import com.skymoon7337.backend.model.Todo;
 import com.skymoon7337.backend.service.TodoService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
