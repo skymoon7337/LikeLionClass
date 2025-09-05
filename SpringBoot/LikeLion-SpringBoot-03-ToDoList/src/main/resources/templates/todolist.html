@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>To Do List</title>
+    <meta http-equiv="refresh" content="60">
+    <link rel="stylesheet" th:href="@{/styles.css}"/>
+</head>
+<body>
+<div class="container">
+    <div style="text-align:center;">
+        <a href="https://velog.io/@skymoon7337/To-Do-List에-D-day-추가해보기" target="_blank">벨로그 링크</a>
+    </div>
+    <h1>1분마다 자동갱신(새로고침)<br>V체크시 아래로, 남은시간순 정렬</h1>
+
+    <form th:action="@{/todos}" method="post">
+        <input type="text" name="task" placeholder="Enter a new task" required/>
+        <input type="datetime-local" name="dday" placeholder="마감일(선택)" />
+        <button type="submit">할일 추가</button>
+    </form>
+
+    <div class="todo-list">
+        <ul>
+            <li th:each="task: ${todos}">
+                <form th:action="@{/todos/toggle}" method="post" style="display:inline;">
+                    <input type="hidden" name="taskId" th:value="${task.id}" />
+                    <input type="checkbox" onclick="this.form.submit()" th:checked="${task.completed}"  />
+                </form>
+
+                <span th:text="${task.description}"></span>
+                <span th:text="${task.getLeftTime}"></span>
+
+                <form th:action="@{/todos/update}" method="post" style="display:inline;">
+                    <input type="hidden" name="taskId" th:value="${task.id}"/>
+                    <input type="text" name="newDescription" placeholder="Edit Task" required />
+                    <input type="datetime-local" name="newDday"
+                           th:value="${task.dday != null ? #temporals.format(task.dday, 'yyyy-MM-dd''T''HH:mm') : ''}" />
+                    <button type="submit">Update</button>
+                </form>
+
+                <form th:action="@{/todos/delete}" method="post" style="display:inline;">
+                    <input type="hidden" name="taskId" th:value="${task.id}"/>
+                    <button type="submit">Delete</button>
+                </form>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+/* 전체 배경 및 폰트 */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #e0f7fa, #fce4ec);
+}
+
+/* 가운데 카드 스타일 */
+.container {
+    max-width: 700px;
+    margin: 60px auto;
+    background-color: #ffffff;
+    padding: 40px 35px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    border: 1px solid #ddd;
+}
+
+/* 제목 스타일 */
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+/* 상단 링크 */
+.container > div:first-child {
+    margin-bottom: 15px;
+}
+.container a {
+    color: #3498db;
+    text-decoration: none;
+}
+.container a:hover {
+    text-decoration: underline;
+}
+
+/* 입력 폼 */
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+input[type="text"], input[type="datetime-local"] {
+    flex: 1 1 200px;
+    padding: 10px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+input[type="text"]:focus, input[type="datetime-local"]:focus {
+    border-color: #5cb85c;
+}
+
+/* 버튼 스타일 */
+button {
+    padding: 10px 20px;
+    background-color: #5cb85c;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+    background-color: #4cae4c;
+    transform: translateY(-1px);
+}
+
+/* 할일 리스트 */
+.todo-list ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.todo-list li {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #333;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+}
+
+/* 리스트 안의 각 form */
+.todo-list li form {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0;
+}
+
+/* 텍스트 입력 줄이기 */
+.todo-list li input[type="text"] {
+    height: 34px;
+    font-size: 14px;
+    padding: 6px 10px;
+}
+
+/* 버튼 높이 */
+.todo-list li button {
+    height: 36px;
+    font-size: 14px;
+    padding: 6px 14px;
+}
+
+/* 체크박스 스타일 */
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: #5cb85c;
+    cursor: pointer;
+}
