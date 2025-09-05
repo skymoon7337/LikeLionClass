@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Event Edit</title>
+  <meta charset="UTF-8"/>
+  <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+<h1>이벤트 수정</h1>
+<form th:action="@{|/events/${event.id}/edit|}" th:object="${event}" method="post" class="register-form">
+  <label for="name">이름:</label>
+  <input type="text" id="name" th:field="*{name}" required><br>
+  <label for="eventDate">날짜:</label>
+  <input type="datetime-local" id="eventDate" th:field="*{eventDate}" required><br>
+  <label for="location">장소:</label>
+  <input type="text" id="location" th:field="*{location}"><br>
+  <button type="submit" class="register-btn">수정하기</button>
+  <a th:href="@{|/events/${event.id}|}" class="back-link">취소</a>
+</form>
+</body>
+</html>

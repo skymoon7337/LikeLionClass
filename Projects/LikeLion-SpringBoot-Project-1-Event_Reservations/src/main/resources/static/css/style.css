@@ -1,0 +1,181 @@
+body {
+  font-family: 'Pretendard', 'Noto Sans KR', Arial, sans-serif;
+  background: #f5f7fa;
+  margin: 0;
+  padding: 0 0 60px 0;
+}
+
+h1, h2 {
+  color: #24292f;
+  margin-top: 32px;
+  margin-bottom: 18px;
+  letter-spacing: -1px;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 32px auto;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 22px 0 rgba(60,60,90,0.09);
+  font-size: 1.08rem;
+  table-layout: fixed;
+}
+
+th, td {
+  padding: 13px 16px;
+  border-bottom: 1px solid #ececec;
+  text-align: left;
+  vertical-align: middle;
+  background: none;
+  word-break: break-all;
+}
+
+th {
+  background: #f2f3f7;
+  color: #6b6b6b;
+  font-weight: bold;
+}
+
+tr:last-child td { border-bottom: none; }
+
+td { white-space: pre-line; }
+
+
+.detail-btn, .reserve-btn, .cancel-btn, .register-btn, .delete-btn {
+  font-weight: 500;
+  font-size: 1rem;
+  border-radius: 7px;
+  border: none;
+  transition: background 0.13s, color 0.13s;
+  padding: 6px 18px;
+  cursor: pointer;
+  display: inline-block;
+  box-shadow: none;
+}
+
+.detail-btn {
+  color: #7c3aed;
+  background: #f7f4fe;
+  border: 1px solid #7c3aed22;
+}
+
+.detail-btn:hover {
+  background: #ede9fe;
+  color: #512a98;
+}
+
+.delete-btn, .cancel-btn {
+  background: #e04141;
+  color: #fff;
+}
+
+.delete-btn:hover, .cancel-btn:hover {
+  background: #b82626;
+}
+
+.reserve-btn, .register-btn {
+  background: #7c3aed;
+  color: #fff;
+}
+
+.reserve-btn:hover, .register-btn:hover {
+  background: #6033b2;
+}
+
+
+td form {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+td:last-child, td:nth-last-child(2) {
+  text-align: center;
+  vertical-align: middle;
+}
+
+
+form.reserve-form, form.register-form {
+  margin: 14px auto 24px auto;
+  padding: 24px 18px 12px 18px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 3px 12px rgba(80,90,120,0.07);
+  max-width: 400px;
+}
+
+input[type="text"], input[type="number"], input[type="datetime-local"] {
+  width: 97%;
+  padding: 8px 12px;
+  margin-bottom: 14px;
+  border: 1.2px solid #ccc;
+  border-radius: 7px;
+  background: #f7f8fa;
+  font-size: 1rem;
+  transition: border 0.2s;
+}
+
+input[type="text"]:focus, input[type="number"]:focus, input[type="datetime-local"]:focus {
+  outline: none;
+  border-color: #8f67e8;
+}
+
+hr {
+  margin: 38px 0 24px 0;
+  border: none;
+  border-bottom: 1.5px solid #e2e2e2;
+}
+
+a {
+  color: #7c3aed;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 14px;
+  display: inline-block;
+  transition: color 0.13s;
+}
+
+a:hover {
+  color: #512a98;
+  text-decoration: underline;
+}
+
+a.back-link {
+  display: block !important;
+  width: fit-content !important;
+  margin: 36px auto 0 auto !important;
+  text-align: center !important;
+  font-size: 1.08rem;
+}
+
+@media (max-width: 650px) {
+  body {
+    padding: 0 2vw 40px 2vw;
+  }
+
+  table, form {
+    font-size: 0.98rem;
+    max-width: 100vw;
+    overflow-x: auto;
+  }
+
+  th, td {
+    padding: 10px 6px;
+  }
+
+  input, button {
+    font-size: 0.97rem;
+  }
+
+}
+.center-info {
+  text-align: center;
+  margin: 8px 0 20px 0;
+  font-size: 1.07rem;
+  color: #232323;
+}
