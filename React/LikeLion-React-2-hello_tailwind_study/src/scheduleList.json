@@ -1,0 +1,188 @@
+[
+  {
+    "date": 1,
+    "todos": ["🦁 백엔드스쿨"],
+    "isSat": false,
+    "isHoliday": false
+  },
+  {
+    "date": 2,
+    "todos": [],
+    "isSat": true,
+    "isHoliday": false
+  },
+  {
+    "date": 3,
+    "todos": [],
+    "isSat": false,
+    "isHoliday": true
+  },
+  {
+    "date": 4,
+    "todos": ["🦁 백엔드스쿨"],
+    "isSat": false,
+    "isHoliday": false
+  },
+  {
+    "date": 5,
+    "todos": ["🦁 백엔드스쿨", "🕹️ 게임"],
+    "isSat": false,
+    "isHoliday": false
+  },
+  {
+    "date": 6,
+    "todos": ["🦁 백엔드스쿨"],
+    "isSat": false,
+    "isHoliday": false
+  },
+  {
+    "date": 7,
+    "todos": [],
+    "isSat": false,
+    "isHoliday": false
+  },
+  {
+    "date": 8,
+    "todos": ["🦁 백엔드스쿨"],
+    "isSat": false,
+    "isHoliday": false
+  },
+  {
+    "date": 9,
+    "todos": ["🚴 자전거여행"],
+    "isSat": true,
+    "isHoliday": false
+  },
+  {
+    "date": 10,
+    "todos": [],
+    "isSat": false,
+    "isHoliday": true
+  },
+  {
+    "date": 11,
+    "todos": ["🧹 청소하기"],
+    "isSat": false,
+    "isHoliday": false
+  },
+  {
+    "date": 12,
+    "todos": [],
+    "isSat": false,
+    "isHoliday": false
+  },
+  {
+    "date": 13,
+    "todos": ["👕 빨래하기"],
+    "isSat": false,
+    "isHoliday": false
+  },
+  {
+    "date": 14,
+    "todos": [],
+    "isSat": false,
+    "isHoliday": false
+  },
+  {
+    "date": 15,
+    "todos": ["🇰🇷 광복절", "🧹 청소하기"],
+    "isSat": false,
+    "isHoliday": true
+  },
+  {
+    "date": 16,
+    "todos": [],
+    "isSat": true,
+    "isHoliday": false
+  },
+  {
+    "date": 17,
+    "todos": ["⚾️ 야구관람"],
+    "isSat": false,
+    "isHoliday": true
+  },
+  {
+    "date": 18,
+    "todos": ["🧗‍♂️ 암벽등반"],
+    "isSat": false,
+    "isHoliday": false
+  },
+  {
+    "date": 19,
+    "todos": [],
+    "isSat": false,
+    "isHoliday": false
+  },
+  {
+    "date": 20,
+    "todos": [],
+    "isSat": false,
+    "isHoliday": false
+  },
+  {
+    "date": 21,
+    "todos": [],
+    "isSat": false,
+    "isHoliday": false
+  },
+  {
+    "date": 22,
+    "todos": [],
+    "isSat": false,
+    "isHoliday": false
+  },
+  {
+    "date": 23,
+    "todos": ["🧹 청소하기"],
+    "isSat": true,
+    "isHoliday": false
+  },
+  {
+    "date": 24,
+    "todos": ["🧹 청소하기"],
+    "isSat": false,
+    "isHoliday": true
+  },
+  {
+    "date": 25,
+    "todos": [],
+    "isSat": false,
+    "isHoliday": false
+  },
+  {
+    "date": 26,
+    "todos": ["🏋️‍♂️ 운동하기", "수업"],
+    "isSat": false,
+    "isHoliday": false
+  },
+  {
+    "date": 27,
+    "todos": ["수업"],
+    "isSat": false,
+    "isHoliday": false
+  },
+  {
+    "date": 28,
+    "todos": ["수업", "🛍️ 쇼핑하기"],
+    "isSat": false,
+    "isHoliday": false
+  },
+  {
+    "date": 29,
+    "todos": ["수업"],
+    "isSat": false,
+    "isHoliday": false
+  },
+  {
+    "date": 30,
+    "todos": ["수업"],
+    "isSat": true,
+    "isHoliday": false
+  },
+  {
+    "date": 31,
+    "todos": ["🍪 요리하기", "🚶 산책하기"],
+    "isSat": false,
+    "isHoliday": true
+  }
+]
