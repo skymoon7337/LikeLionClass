@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Sky's 계산기</title>
+    <style>
+        @font-face {
+            font-family: 'Ownglyph_corncorn-Rg';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2412-1@1.0/Ownglyph_corncorn-Rg.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'Ownglyph_corncorn-Rg', Arial, sans-serif;
+            background: #f0f4f8;
+            margin: 0;
+            padding: 40px;
+        }
+
+        h1 {
+            font-family: 'Arial Black', sans-serif;
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        form {
+            background: #ffffff;
+            padding: 30px 32px;
+            border-radius: 16px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+            max-width: 420px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 18px;
+            color: #444;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 24px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 20px;
+            background-color: #fff;
+            color: #333;
+            box-sizing: border-box;
+        }
+
+        .button-wrapper {
+            text-align: center;
+        }
+
+        button {
+            font-family: 'Ownglyph_corncorn-Rg', Arial, sans-serif;
+            background-color: #6c5ce7;
+            color: #fff;
+            border: none;
+            padding: 12px 24px;
+            font-size: 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #4834d4;
+        }
+
+        .result, .error {
+            font-weight: bold;
+            max-width: 420px;
+            margin: 20px auto;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .result {
+            background-color: #dff9fb;
+            color: #0984e3;
+        }
+
+        .error {
+            background-color: #ffeaa7;
+            color: #d63031;
+        }
+    </style>
+</head>
+
+<body>
+<h1>Sky's 계산기</h1>
+
+<form th:action="@{/calculate}" method="post">
+    <label for="num1">Number 1:</label>
+    <input type="number" step="any" id="num1" name="num1" required/>
+
+    <label for="num2">Number 2:</label>
+    <input type="number" step="any" id="num2" name="num2" required/>
+
+    <label for="operation">Operation:</label>
+    <select id="operation" name="operation">
+        <option value="add">Add (+)</option>
+        <option value="subtract">Subtract (-)</option>
+        <option value="multiply">Multiply (×)</option>
+        <option value="divide">Divide (÷)</option>
+    </select>
+
+    <div class="button-wrapper">
+        <button type="submit">Calculate</button>
+    </div>
+</form>
+
+<div th:if="${errorMessage}" class="error">
+    <h2>Error: <span th:text="${errorMessage}"></span></h2>
+</div>
+
+<div th:if="${result != null}" class="result">
+    <h2>Result: <span th:text="${result}"></span></h2>
+</div>
+</body>
+</html>
